@@ -24,13 +24,13 @@ public class Main {
         for (int i = 0; i < arr.length; i++) {
             String fc[];
 
-            if (arr[i].getFac().equals(arr[i + 1]))
+            if (arr[i].getFac().equals(arr[i + 1].getFac()))
                 continue;
-            else {
-                fc[i] = arr[i].getFac();
+            else {fc[i+1] = arr[i].getFac();
+
 
             }
-            System.out.println(arr[i].getStudent());
+           arr[i].getStudent();
         }
 
 
