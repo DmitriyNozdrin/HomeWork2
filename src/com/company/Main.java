@@ -14,13 +14,14 @@ public class Main {
 
 
 
-        Student s1 = new Student (1, "Nz", "Dm", "Ur", "16.08.1983", "Kharkov", 8067, "IT", 5, "Kit" );
-        Student s2 = new Student (1, "Nn", "Mm", "TT", "01.09.1989", "Kharkov", 066167, "PT", 4, "KZ" );
+        Student s1 = new Student ("Nz", "Dm", "Ur", "16.08.1983", "Kharkov", 8067, "IT", 5, "Kit" );
+        Student s2 = new Student ("Nn", "Mm", "TT", "01.09.1989", "Kharkov", 066167, "PT", 4, "KZ" );
 
-        System.out.println(s1.getFirst_name());
+
         Student arr [] = {s1, s2};
 
-
+s1.getStudent();
+s2.getStudent();
     Scanner scan = new Scanner(System.in);
     String kursIn = scan.next();
             for (int i = 0; i <arr.length ; i++) {
@@ -28,7 +29,7 @@ public class Main {
                 arr[i].getStudent();
 
         }
-
+        System.out.println("Enter date of birth");
             String d = scan.next();
             DateFormat format = new SimpleDateFormat("dd.mm.yyyy");
         Date inputDate = null;
@@ -51,5 +52,15 @@ public class Main {
 
 
         }
-}
-}
+
+       /* for (int i = 0; i <arr.length ; i++) {
+            String []f;
+            for (int j = 0; j < ; j++) {
+
+            } {
+
+            }*/
+
+        }
+    }
+

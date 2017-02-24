@@ -5,7 +5,7 @@ package com.company;
  */
 public class Student {
 
-    int id;
+    String id;
     String last_name;
     String first_name;
     String second_name;
@@ -16,8 +16,16 @@ public class Student {
     int kurs;
     String gr;
 
-    public Student(int id, String last_name, String first_name, String second_name, String d_date, String address, double tel, String fac, int kurs, String gr) {
-        this.id = id;
+    private static long idCounter = 0;
+
+    public static synchronized String createID() {
+        return String.valueOf(idCounter++);
+    }
+
+   
+
+    public Student(String last_name, String first_name, String second_name, String d_date, String address, double tel, String fac, int kurs, String gr) {
+        this.id = createID();
         this.last_name = last_name;
         this.first_name = first_name;
         this.second_name = second_name;
@@ -30,7 +38,7 @@ public class Student {
     }
 
     public void getStudent() {
-        System.out.println("Last Name: " + last_name + " " + "First Name: " + first_name + " " + "Second Name: " + second_name + " " + "Date of Birth: " + d_date + " " + "Address: " + address + " " + "Facultet: " + fac + " " + "Kurs: " + kurs + " " + "Grup: " + gr);
+        System.out.println("id: " + id + "Last Name: " + last_name + " " + "First Name: " + first_name + " " + "Second Name: " + second_name + " " + "Date of Birth: " + d_date + " " + "Address: " + address + " " + "Facultet: " + fac + " " + "Kurs: " + kurs + " " + "Grup: " + gr);
     }
 
     public void setLast_name(String last_name) {
@@ -98,9 +106,11 @@ public class Student {
     public String getGr() {
         return gr;
     }
+
     public int getKurs() {
         return kurs;
     }
+
     public double getTel() {
         return tel;
     }
