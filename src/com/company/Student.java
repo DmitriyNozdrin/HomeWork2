@@ -22,7 +22,7 @@ public class Student {
         return String.valueOf(idCounter++);
     }
 
-   
+
 
     public Student(String last_name, String first_name, String second_name, String d_date, String address, double tel, String fac, int kurs, String gr) {
         this.id = createID();

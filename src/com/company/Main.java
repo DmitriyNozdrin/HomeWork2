@@ -14,15 +14,29 @@ public class Main {
 
 
 
-        Student s1 = new Student ("Nz", "Dm", "Ur", "16.08.1983", "Kharkov", 8067, "IT", 5, "Kit" );
-        Student s2 = new Student ("Nn", "Mm", "TT", "01.09.1989", "Kharkov", 066167, "PT", 4, "KZ" );
+        Student s1 = new Student ("Nz", "Dm", "Ur", "16.08.1983", "Kharkov", 8067, "IT", 5, "Kit-17" );
+        Student s2 = new Student ("s2", "Mm", "TT", "01.09.1989", "kiev", 066167, "PT", 4, "KZ" );
+        Student s3 = new Student ("s3k", "s3", "Uiir", "16.07.2000", "Kharkov", 8067, "IT", 1, "Kit-16" );
+        Student s4 = new Student ("34", "s4", "ioT", "01.09.1995", "lviv", 066167, "hz", 2, "KZ" );
 
 
-        Student arr [] = {s1, s2};
+        Student arr [] = {s1, s2,s3,s4};
 
-s1.getStudent();
-s2.getStudent();
+        for (int i = 0; i <arr.length ; i++) {
+            String fuc [];
+           
+            if (arr[i].getFac().equals(arr[i + 1]))
+                continue;
+            else {
+                fuc[i] = arr[i].getFac();
+
+            }
+            System.out.println(arr[i].getFac());
+        }
+
+
     Scanner scan = new Scanner(System.in);
+        System.out.println("Enter Facultet");
     String kursIn = scan.next();
             for (int i = 0; i <arr.length ; i++) {
             if (arr[i].getFac().equals(kursIn))
